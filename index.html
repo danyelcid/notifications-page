@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
   
   <title>Frontend Mentor | Notifications page</title>
 
@@ -20,84 +21,131 @@
 <main>
   <header>
   <div class="title">
-      <h1>
-    Notifications <span>3</span>
-  </h1>
+    <h1 class="page-title">
+      Notifications <span class="counter" id="counter">3</span>
+    </h1>
   </div>
-  <div class="actions">
-    <ul>
-      <li>
-        Mark all as read
+  <div class="menu">
+    <ul class="actions">
+      <li class="action" id="read-all" title="Mark all as read">
+        <div class="action-icon">
+          <svg id="check-all" data-name="check-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513.14 480">
+              <path 
+                  d="M265.64,275l87.21-171.2a29.22,29.22,0,0,0-12.77-39.29,29.39,29.39,0,0,0-13.25-3.18,29.09,29.09,0,0,0-26,16L229,218.16Z" />
+              <path 
+                  d="M177.33,319.67l-34.64,68L64.92,266.88A29.21,29.21,0,0,0,15.8,298.51l89.56,139.1a45.68,45.68,0,0,0,38.53,21.05c.79,0,1.59,0,2.39-.06a45.41,45.41,0,0,0,38.58-25l29.08-57.07Z" />
+              <path 
+                  d="M289.84,418.67a45.65,45.65,0,0,1-38.53-21.06l-89.57-139.1a29.21,29.21,0,1,1,49.12-31.63l77.77,120.78L446.73,37.29a29.21,29.21,0,0,1,52.06,26.52l-168,329.78a45.42,45.42,0,0,1-38.59,25C291.42,418.64,290.62,418.67,289.84,418.67Z" />
+          </svg>
+        </div>
+        <span class="action-text">Mark all as read</span>
       </li>
     </ul>
   </div>
-
 </header>
+<hr>
 <div class="main-content">
-    <div class="notification unread">
+    <div class="notification unread animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-mark-webber.webp" alt="Mark Webber">
       </div>
     <div class="notification-head">
-      <p class="notification-title">Mark Webber reacted to your recent post My first tournament today!</p>
+      <p class="notification-title"><a href="#" class="user-name link">Mark Webber</a> reacted to your recent post <a href="#" class="link post-link">My first tournament today!</a></p>
       <p class="time-stamp">1m ago</p></div>
     </div>
-    <div class="notification unread">
+    <div class="notification unread animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-angela-gray.webp" alt="Angela Gray">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Angela Gray followed you</p>
+        <p class="notification-title"><a href="#" class="user-name link">Angela Gray</a> followed you</p>
         <p class="time-stamp">5m ago</p>
       </div>
     </div>
-    <div class="notification unread">
+    <div class="notification unread animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Jacob Thompson has joined your group Chess Club</p>
+        <p class="notification-title"><a href="#" class="user-name link">Jacob Thompson</a> has joined your group <a href="#" class="link group-link">Chess Club</a></p>
         <p class="time-stamp">1 day ago</p>
       </div>
     </div>
-    <div class="notification">
+    <div class="notification unread animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Rizky Hasanuddin sent you a private message</p>
+        <p class="notification-title"><a href="#" class="user-name link">Rizky Hasanuddin</a> sent you a private message</p>
         <p class="time-stamp">5 days ago</p>
       </div>
-      <div class="notification-body">
+      <a href="#" class="message-link">
         Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
         I'm already having lots of fun and improving my game.
-      </div>
+      </a>
     </div>
-    <div class="notification unread">
+    <div class="notification unread animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Kimberly Smith commented on your picture</p>
+        <p class="notification-title"><a href="#" class="user-name link">Kimberly Smith</a> commented on your picture
+          <a href="#" class="link img-link"><img class="comented-img" src="assets/images/image-chess.webp" alt="picture"></a>
+        </p>
         <p class="time-stamp">1 week ago</p>
-        <img class="comented-img" src="assets/images/image-chess.webp" alt="picture">
       </div>
     </div>
-    <div class="notification">
+    <div class="notification animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate</p>
+        <p class="notification-title"><a href="#" class="user-name link">Nathan Peterson</a> reacted to your recent post <a href="#" class="link post-link">5 end-game strategies to increase your win rate</a></p>
         <p class="time-stamp">2 weeks ago</p>
       </div>
     </div>
-    <div class="notification">
+    <div class="notification animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
       </div>
       <div class="notification-head">
-        <p class="notification-title">Anna Kim left the group Chess Club</p>
+        <p class="notification-title"><a href="#" class="user-name link">Anna Kim</a> left the group <a href="#" class="link group-link">Chess Club</a></p>
+        <p class="time-stamp">2 weeks ago</p>
+      </div>
+    </div>
+    <div class="notification animated ">
+      <div class="user-avatar">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
+      </div>
+      <div class="notification-head">
+        <p class="notification-title"><a href="#" class="user-name link">Nathan Peterson</a> reacted to your recent post <a href="#" class="link post-link">5 end-game strategies to increase your win rate</a></p>
+        <p class="time-stamp">2 weeks ago</p>
+      </div>
+    </div>
+    <div class="notification animated ">
+      <div class="user-avatar">
+        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
+      </div>
+      <div class="notification-head">
+        <p class="notification-title"><a href="#" class="user-name link">Anna Kim</a> left the group <a href="#" class="link group-link">Chess Club</a></p>
+        <p class="time-stamp">2 weeks ago</p>
+      </div>
+    </div>
+    <div class="notification animated ">
+      <div class="user-avatar">
+        <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
+      </div>
+      <div class="notification-head">
+        <p class="notification-title"><a href="#" class="user-name link">Nathan Peterson</a> reacted to your recent post <a href="#" class="link post-link">5 end-game strategies to increase your win rate</a></p>
+        <p class="time-stamp">2 weeks ago</p>
+      </div>
+    </div>
+    <div class="notification animated ">
+      <div class="user-avatar">
+        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
+      </div>
+      <div class="notification-head">
+        <p class="notification-title"><a href="#" class="user-name link">Anna Kim</a> left the group <a href="#" class="link group-link">Chess Club</a></p>
         <p class="time-stamp">2 weeks ago</p>
       </div>
     </div>
@@ -109,5 +157,73 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="assets/js/jquery-3.1.1.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      const titles = $('.notification-title')
+      for (const title of titles) {
+        $(title).append('<span class="new-mark"></span>')
+      }
+
+      let count = 0
+      const notifications = $('.notification'),
+            counter = $('#counter')
+
+      for (const n of notifications) {
+        if($(n).hasClass('unread')){
+          count ++
+
+        }
+      }
+      if (count > 0){
+        let a = 0
+      const int = setInterval(() => {
+        $('#counter').text(a)
+        a++
+        if( a == count){
+          clearInterval(int)
+        }
+      }, 35);
+      } else {
+        $('#counter').hide()
+        $('#read-all').addClass('disabled')
+      }
+
+      $('#read-all').click(function () {
+        if (!$(this).hasClass('disabled')){
+          for (const n of notifications) {
+            $(n).removeClass('unread')
+            $('#counter').hide()
+            $('#read-all').addClass('disabled')
+          }
+        }
+      })
+
+      const notificationObserverOptios = {
+        threshold: 1,
+        rootMargin: "0px 0px 0px 0px"
+      }
+
+      const appearOnScroll = new IntersectionObserver(
+        (entries, appearOnScroll)=>{
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              return
+            } else {
+               entry.target.classList.add('fadeInRightBig')
+               appearOnScroll.unobserve(entry.target)
+            }
+
+          });
+        }, notificationObserverOptios )
+
+      for (const n of notifications) {
+        appearOnScroll.observe(n)
+      }
+    })
+  </script>
 </body>
 </html>
