@@ -74,13 +74,14 @@ table {
 
 body
 {
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: var(--fw-light);
     line-height: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--Light-grayish-blue-1);
 }
 a {
     text-decoration: none;
@@ -95,8 +96,7 @@ main
     margin: 3rem 2rem 2rem;
     padding: 2rem;
     border-radius: 1rem;
-    border: 1px solid var(--Dark-grayish-blue);
-    box-shadow: 0px 5px 5px var(--Grayish-blue);
+    background-color: var(--White);
 }
 header
 {
