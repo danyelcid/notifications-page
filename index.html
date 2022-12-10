@@ -71,7 +71,7 @@
         <p class="time-stamp">1 day ago</p>
       </div>
     </div>
-    <div class="notification unread animated ">
+    <div class="notification animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin">
       </div>
@@ -84,7 +84,7 @@
         I'm already having lots of fun and improving my game.
       </a>
     </div>
-    <div class="notification unread animated ">
+    <div class="notification animated ">
       <div class="user-avatar">
         <img src="assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith">
       </div>
@@ -122,33 +122,7 @@
         <p class="time-stamp">2 weeks ago</p>
       </div>
     </div>
-    <div class="notification animated ">
-      <div class="user-avatar">
-        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
-      </div>
-      <div class="notification-head">
-        <p class="notification-title"><a href="#" class="user-name link">Anna Kim</a> left the group <a href="#" class="link group-link">Chess Club</a></p>
-        <p class="time-stamp">2 weeks ago</p>
-      </div>
-    </div>
-    <div class="notification animated ">
-      <div class="user-avatar">
-        <img src="assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson">
-      </div>
-      <div class="notification-head">
-        <p class="notification-title"><a href="#" class="user-name link">Nathan Peterson</a> reacted to your recent post <a href="#" class="link post-link">5 end-game strategies to increase your win rate</a></p>
-        <p class="time-stamp">2 weeks ago</p>
-      </div>
-    </div>
-    <div class="notification animated ">
-      <div class="user-avatar">
-        <img src="assets/images/avatar-anna-kim.webp" alt="Anna Kim">
-      </div>
-      <div class="notification-head">
-        <p class="notification-title"><a href="#" class="user-name link">Anna Kim</a> left the group <a href="#" class="link group-link">Chess Club</a></p>
-        <p class="time-stamp">2 weeks ago</p>
-      </div>
-    </div>
+
   </div>
 </main>
 
@@ -180,13 +154,13 @@
       }
       if (count > 0){
         let a = 0
-      const int = setInterval(() => {
-        $('#counter').text(a)
-        a++
-        if( a == count){
-          clearInterval(int)
-        }
-      }, 35);
+        const int = setInterval(() => {
+          $('#counter').text(a)
+          a++
+          if( a > count){
+            clearInterval(int)
+          }
+        }, 35);
       } else {
         $('#counter').hide()
         $('#read-all').addClass('disabled')
