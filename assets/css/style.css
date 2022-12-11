@@ -262,6 +262,7 @@ header
         margin: 0;
         padding: 1rem;
         border: none;
+        border-radius: 0;
         box-shadow: none;
     }
     .page-title
